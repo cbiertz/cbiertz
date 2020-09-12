@@ -10,6 +10,9 @@ A website featuring the work of Christopher Biertzer
 ## Website
 https://cbiertz.github.io/cbiertz/
 
+## Screenshots
+![Example screenshot](assets/images/portfolio_Screenshot.png)
+
 ## Contribution
 Made with ❤️ by Chris Biertzer
 
