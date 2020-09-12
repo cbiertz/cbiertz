@@ -58,7 +58,7 @@ header nav ul {
 
 header nav ul li a {
     padding: 10px 20px;
-    font-size: 1vw;
+    font-size: 25px;
 }
 
 header nav ul li a:hover {
@@ -112,13 +112,20 @@ body {
     font-size: 20px;
 }
 
+.section-container {
+    margin: 3% 0 0 0;
+}
+
 .section-content {
     display: flex;
     width: 85%;
     padding-right: 5%;
     padding-bottom: 1%;
     justify-content: flex-start;
-    font-size: 16px;
+}
+
+.section-content p {
+    font-size: 20px;
 }
 
 .section-content ul {
@@ -127,12 +134,12 @@ body {
     justify-content: space-around;
     align-items: flex-start;
     list-style: none;
-    padding-top: 0.5%;;
+    padding-top: 0%;
 }
 
 .section-content ul li a {
     padding: 10px 20px;
-    font-size: 1vw;
+    font-size: 25px;
     text-decoration: none;
     color: var(--dark);
     font-weight: bold;
@@ -159,7 +166,7 @@ body {
 
 .project-grid-item {
     width: 100%;
-    padding:  0;
+    padding: 0;
     border: 2px solid var(--dark);
     display: flex;
     align-items: flex-end;
@@ -218,8 +225,7 @@ body {
 }
 
 .grid-item-img img {
-    height: auto;
-    max-width: 100%;
+    height: 400px;
 }
 
 .grid-item-img a {
@@ -229,7 +235,7 @@ body {
 .project-grid-item.proj1 {
     grid-column: 1 / span 2;
     grid-row: 1 /span 2;
-    background-size: 100%;
+    width: 100%;
     height: 400px;
     
 }
@@ -238,32 +244,24 @@ body {
     grid-column: 3;
     grid-row: 1;
     background-size: 100%;
-    height: 196px;
-    background-position-y: 75%;
+
 }
 
 .project-grid-item.proj3 {
     grid-column: 3;
     grid-row: 2;
     background-size: 100%;
-    height: 196px;
-    background-position-y: 30%;
 }
 
 .project-grid-item.proj4 {
     grid-column: 1;
     grid-row: 3;
     background-size: 100%;
-    height: 196px;
-    background-position-y: 30%;
 }
 
 .project-grid-item.proj5 {
     grid-column: 2;
     grid-row: 3;
-    background-size: 100%;
-    height: 196px;
-    background-position-y: 10%;
 }
 
 .project-grid-item h3 {
@@ -273,6 +271,7 @@ body {
 .project-grid-item h4 {
     font-size: 12px;
 }
+/*END Grid Styles*/
 
 /* Footer Styles */
 
@@ -297,6 +296,9 @@ footer h2 a:hover {
     transition: all 0.2s ease-in;
 }
 
+/*End Footer Styles*/
+
+/* Whoops page body styles */
 .whoops-container {
     Padding: 5% 0 5% 0
 }
@@ -319,7 +321,7 @@ footer h2 a:hover {
 .button {
     margin: 0 auto;
     padding: 15px;
-    width: 10%;
+    width: 20%;
     background: var(--beer);
     font-weight: bold;
     font-size: 30px;
@@ -332,3 +334,322 @@ footer h2 a:hover {
     cursor: pointer;
 }
 
+/*END whoops page body styles */
+
+/* MEDIA QUERIES */
+
+/* Media Query For Smaller Desktop Screens and Smaller */
+
+@media screen and (max-width: 980px) {
+    .section-container {
+        margin: 4% 15%;
+    }
+
+   
+
+    .grid-item-desc {
+        padding: 1rem 1.5rem;
+    }
+
+    .grid-item-desc h3 {
+        font-size: 2rem;
+        color: var(--beer);
+    }
+
+    .grid-item-desc h4 {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+
+    .project-grid-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 9fr;
+        gap: 8px;
+    }
+
+    .project-grid-item.proj1 {
+        grid-column: 1;
+        grid-row: 1;
+        height: 300px;
+    }
+    
+    .project-grid-item.proj2 {
+        grid-column: 1;
+        grid-row: 2;
+        height: 300px;
+    }
+    
+    .project-grid-item.proj3 {
+        grid-column: 1;
+        grid-row: 3;
+        height: 300px;
+    }
+    
+    .project-grid-item.proj4 {
+        grid-column: 1;
+        grid-row: 4;
+        height: 300px;
+    }
+    
+    .project-grid-item.proj5 {
+        grid-column: 1;
+        grid-row: 5;
+        height: 300px;
+    }
+   
+    .section-content ul li a {
+        padding: 10px 0px 5px 0px;
+        margin-right: 22px;
+        font-size: 2vw;
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: bold;
+        border-bottom: solid 2px var(--dark);
+    }
+    
+    .section-content ul li a:active {
+        color: var(--beer);
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+
+@media screen and (max-width: 768px) {
+
+    .flex-row {
+        flex-flow: column;
+        justify-content: space-around;
+    }
+
+    header {
+        justify-content: flex-start;
+        top: 0;
+        padding: 40px 50px 5px 50px;
+        background-image: url("../images/hero.jpg");
+        background-position-y: 550px;
+        background-size: cover;
+        background-attachment: fixed;
+        flex-flow: column;
+    }
+
+    header h1 a {
+        color: var(--dark);
+    }
+
+    header nav {
+        margin: 20px 0;
+    }
+
+    header nav ul {
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+    }
+    
+    header nav ul li a {
+        padding: 10px;
+        margin: 0 20px 0 0;
+        font-size: 3vw;
+        color: var(--dark);
+        border-bottom: solid 2px var(--beer);
+        font-weight: bold;
+    }
+
+    header nav ul li a:hover {
+        background: none;
+    }
+
+    header nav ul li a:active {
+        color: var(--beer);
+    }    
+
+    .hero {
+        display: flex;
+        background-position-y: 550px;
+        justify-content: flex-end;
+        align-content: flex-end;
+        color: var(--light);
+        height: 200px;
+        background-attachment: fixed;
+    }
+
+    .hero h2 {
+        opacity: 0;
+    }
+
+    .section-container {
+        margin: 4% 0 4% 10%;
+    }
+
+
+    .section-title {
+        display: flex;
+        justify-content: flex-start;
+        width: max-content;
+        padding: 0 15px 5px 0px;
+        margin: 0 5% 2% 0%;
+        border-right: none;
+        border-bottom: solid 2px var(--beer);
+    }
+
+    .project-grid-item::after {
+        opacity: 0.6;
+    }
+
+    .project-grid-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 9fr;
+        gap: 8px;
+    }
+    
+    .section-content ul {
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        list-style: none;
+        padding: 5% 0 1% 0;
+    }
+    
+    .section-content ul li a {
+        font-size: 6.5vw;
+        border-bottom: none;
+    }
+
+    .section-content ul li {
+        padding-bottom: 10px;
+    }
+
+    footer {
+        flex-flow: column;
+        margin-top: 1%;
+        padding: 5% 3% 5% 3%;
+    }
+    
+    footer h2 a {
+        font-size: 30px;
+    }
+    
+    footer h2 a:active {
+        color: var(--light);
+    }
+
+    footer p {
+        font-size: 18px;
+        padding-top: 2%;
+    }
+
+    /* Whoops page body styles */
+
+.whoops h2 {
+    font-size: 70px;
+}
+
+.whoops h3 {
+    text-align: center;
+    font-size: 25px;
+    margin: 1% 0 5% 0;
+}
+
+.button {
+    margin: 0 auto;
+    padding: 15px;
+    width: 40%;
+    font-size: 25px;  
+}
+
+.whoops-container {
+    margin-bottom: 100%;
+}
+
+
+
+}
+
+/* MEDIA QUERY FO MOBILE PHONES AND SMALLER */
+
+@media screen and (max-width: 575px) {
+
+    header {
+        padding: 10px 50px 10px 50px;
+        background-position-y: 360px;
+    }
+
+    header h1 a {
+        font-size: 75%;
+    }
+
+    header nav {
+        margin: 5px 0 10px 0;
+        padding: 0 0 5px 0;
+    }
+    
+    header nav ul li a {
+        padding: 5px;
+        margin: 0 20px 0 0;
+        font-size: 4vw;
+    }
+
+    .hero {
+        background-position-y: 360px;
+        height: 75px;
+    }
+
+    .grid-item-desc {
+        padding: 1rem 1.5rem;
+    }
+
+    .grid-item-desc h3 {
+        font-size: 1.5rem;
+    }
+
+    .grid-item-desc h4 {
+        font-size: 1rem;
+    }
+
+    .project-grid-item.proj1 {
+        height: 150px;
+    }
+    
+    .project-grid-item.proj2 {
+        height: 150px;
+    }
+    
+    .project-grid-item.proj3 {
+        height: 150px;
+    }
+    
+    .project-grid-item.proj4 {
+        height: 150px;
+    }
+    
+    .project-grid-item.proj5 {
+        height: 150px;
+    }
+   
+   
+    
+    footer h2 a {
+        font-size: 20px;
+    }
+    
+    footer h2 a:active {
+        color: var(--light);
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    .whoops h3 {
+        text-align: center;
+        font-size: 18px;
+        margin: 5% 5%;
+    }
+
+}
