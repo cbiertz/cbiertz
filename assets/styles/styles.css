@@ -10,6 +10,7 @@
     --med:rgba(126, 126, 126, 1);
     --light: rgba(231, 231, 231, 1);
     --beer: rgba(241, 143, 1, 1);
+    --beerclear: rgba(241, 143, 1, 0.8);
 }
 
 /*End Global Styles*/
@@ -82,7 +83,7 @@ header nav ul li a:hover {
     padding: 10px;
     margin: 2% 4%;
     color: var(--dark);
-    background-color: var(--beer);
+    background-color: var(--beerclear);
 }
 /*End Hero Styles*/
 
@@ -137,6 +138,113 @@ body {
 
 .section-content ul li a:hover {
     color: var(--beer);
+}
+
+/* Grid Container */
+.project-grid-wrapper {
+    display: flex;
+    width: 85%;
+    justify-content: flex-start;
+}
+
+.project-grid-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.project-grid-item {
+    width: 100%;
+    padding: 15px 0;
+    border: 2px solid var(--dark);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: center;
+    border: solid var(--dark);
+    position: relative;
+    background-color: var(--light);
+}
+
+.project-grid-item:hover .grid-item-desc h3{
+    color: var(--beer);
+}
+
+.project-grid-item::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: linear-gradient(rgba(241, 143, 1, 0.1), var(--beerclear)) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+:hover.project-grid-item::after {
+    opacity: 1;
+}
+
+.grid-item-desc {
+    background: var(--dark);
+    padding: 2%;
+    color: var(--light);
+    z-index: 100;
+}
+
+.project-grid-item.proj1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 /span 2;
+    background-image: url(../images/proj1.jpg);
+    background-size: 100%;
+    height: 400px;
+    cursor: pointer;
+}
+
+.project-grid-item.proj2 {
+    grid-column: 3;
+    grid-row: 1;
+    background-image: url(../images/proj2.jpg);
+    background-size: 100%;
+    height: 196px;
+    background-position-y: 75%;
+}
+
+.project-grid-item.proj3 {
+    grid-column: 3;
+    grid-row: 2;
+    background-image: url(../images/proj3.jpg);
+    background-size: 100%;
+    height: 196px;
+    background-position-y: 30%;
+}
+
+.project-grid-item.proj4 {
+    grid-column: 1;
+    grid-row: 3;
+    background-image: url(../images/proj4.jpg);
+    background-size: 100%;
+    height: 196px;
+    background-position-y: 30%;
+}
+
+.project-grid-item.proj5 {
+    grid-column: 2;
+    grid-row: 3;
+    background-image: url(../images/proj5.jpg);
+    background-size: 100%;
+    height: 196px;
+    background-position-y: 10%;
+}
+
+.project-grid-item h3 {
+    padding-bottom: 1%;
+}
+
+.project-grid-item h4 {
+    font-size: 12px;
 }
 
 /* Footer Styles */
