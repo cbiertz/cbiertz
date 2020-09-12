@@ -166,10 +166,17 @@ body {
     border: solid var(--dark);
     position: relative;
     background-color: var(--light);
+    cursor: pointer;
 }
 
 .project-grid-item:hover .grid-item-desc h3{
     color: var(--beer);
+    transition: all 0.5s ease-in;
+}
+
+.project-grid-item:hover {
+    border: solid var(--beer);
+    transition: all 0.5s ease-in;
 }
 
 .project-grid-item::after {
@@ -185,6 +192,7 @@ body {
 
 :hover.project-grid-item::after {
     opacity: 1;
+    transition: all 0.5s ease-in-out;
 }
 
 .grid-item-desc {
@@ -200,7 +208,7 @@ body {
     background-image: url(../images/proj1.jpg);
     background-size: 100%;
     height: 400px;
-    cursor: pointer;
+    
 }
 
 .project-grid-item.proj2 {
@@ -262,5 +270,40 @@ footer {
 footer h2 {
     color: var(--beer);
     font-size: 20px;
+}
+
+.whoops-container {
+    Padding: 5% 0 5% 0
+}
+
+.whoops {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.whoops h2 {
+    font-size: 150px;
+}
+
+.whoops h3 {
+   font-size: 25px;
+   margin-bottom: 3%;
+}
+
+.button {
+    margin: 0 auto;
+    padding: 15px;
+    width: 10%;
+    background: var(--beer);
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--dark);
+    border: solid 2px var(--beer);
+}
+
+.button:hover {
+    border: solid 2px var(--dark);
+    cursor: pointer;
 }
 
